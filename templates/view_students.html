@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Students</title>
+</head>
+<body>
+
+<h1>Students List</h1>
+
+{% for student in students %}
+
+<p>
+Name: {{ student[1] }}<br>
+USN: {{ student[2] }}<br>
+Branch: {{ student[3] }}<br>
+CGPA: {{ student[4] }}
+</p>
+
+<hr>
+
+{% endfor %}
+
+<a href="/">Go Home</a>
+
+</body>
+</html>

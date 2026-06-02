@@ -4,18 +4,18 @@ conn = sqlite3.connect("placement.db")
 
 cursor = conn.cursor()
 
-name = input("Enter Name: ")
-usn = input("Enter USN: ")
-branch = input("Enter Branch: ")
-cgpa = float(input("Enter CGPA: "))
-
-cursor.execute(
-    "INSERT INTO students (name, usn, branch, cgpa) VALUES (?, ?, ?, ?)",
-    (name, usn, branch, cgpa)
+cursor.execute("""
+CREATE TABLE students (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    usn TEXT,
+    branch TEXT,
+    cgpa REAL
 )
+""")
 
 conn.commit()
 
-print("Student Added Successfully")
+print("Students table created successfully!")
 
 conn.close()

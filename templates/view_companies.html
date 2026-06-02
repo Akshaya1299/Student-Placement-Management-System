@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Companies</title>
+</head>
+<body>
+
+<h1>Companies List</h1>
+
+{% for company in companies %}
+
+<p>
+Company: {{ company[1] }}<br>
+Minimum CGPA: {{ company[2] }}
+</p>
+
+<hr>
+
+{% endfor %}
+
+<a href="/">Go Home</a>
+
+</body>
+</html>
