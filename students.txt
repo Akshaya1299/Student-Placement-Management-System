@@ -1,0 +1,3 @@
+sanjana,124,CSE,8.7
+Divya,125,CSE,8.9
+Akshaya,123,CSE,9.1
